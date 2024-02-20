@@ -1,3 +1,7 @@
+mod heap;
+mod misc;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Using heap sort");
+    heap::run();
 }
