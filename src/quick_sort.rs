@@ -1,6 +1,8 @@
 use crate::misc;
 
-fn quick_sort(arr: &mut [i32; 10], start_index: usize, end_index: usize) {
+const N: usize = 10;
+
+fn quick_sort(arr: &mut [i32; N], start_index: usize, end_index: usize) {
     let mut i = start_index;
     let mut j = start_index;
 
@@ -26,9 +28,11 @@ fn quick_sort(arr: &mut [i32; 10], start_index: usize, end_index: usize) {
     }
 }
 
-pub fn run() {
-    let mut arr: [i32; 10] = misc::generate_random_array();
+pub fn sort(arr: &mut [i32; N]) {
+    println!("Using quick sort");
+
     let len = arr.len();
-    quick_sort(&mut arr, 0, len - 1);
+    quick_sort(arr, 0, len - 1);
+    
     println!("{:?}", arr);
 }
